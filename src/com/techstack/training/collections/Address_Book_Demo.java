@@ -36,6 +36,13 @@ class Address_Book {
 		this.email = email;
 	}
 
+	@Override
+	public String toString() {
+		return "Address_Book [fname=" + fname + ", lname=" + lname + ", address_Line1=" + address_Line1 + ", city="
+				+ city + ", state=" + state + ", zip_Code=" + zip_Code + ", phone_no=" + phone_no + ", email=" + email
+				+ "]";
+	}
+
 }
 
 public class Address_Book_Demo {
@@ -52,11 +59,15 @@ public class Address_Book_Demo {
 		hs.add(b1);
 		hs.add(b2);
 		hs.add(b3);
+		hs.add(b1);
 		// Traversing Linked hash set
 		System.out.println("Welcome to Address Book Program \n \n");
 		for (Address_Book b : hs) {
-			System.out.println(b.fname + " " + b.lname + " " + b.address_Line1 + " " + b.city + " " + b.state + " "
-					+ b.zip_Code + " " + b.phone_no + " " + b.email);
+			//System.out.println(b.fname + " " + b.lname + " " + b.address_Line1 + " " + b.city + " " + b.state + " "
+				//	+ b.zip_Code + " " + b.phone_no + " " + b.email);
+			System.out.println(b.toString());
 		}
+		//Printing whole Linked hash set
+		System.out.println("\n \n"+hs.toString());
 	}
 }
